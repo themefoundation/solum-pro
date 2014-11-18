@@ -61,9 +61,10 @@ module.exports = function( grunt ) {
 	} );
 
 	// Default task.
-	grunt.registerTask( 'default', ['sass'] );
-	grunt.registerTask( 'grunt-bowercopy', ['bowercopy'] );
-	grunt.registerTask( 'grunt-watch', ['watch'] );
+	grunt.registerTask( 'default', ['watch'] );
+	grunt.registerTask( 'setup', ['bowercopy','sass'] );
+	// grunt.registerTask( 'grunt-bowercopy', ['bowercopy'] );
+	// grunt.registerTask( 'grunt-watch', ['watch'] );
 
 	grunt.util.linefeed = '\n';
 };
