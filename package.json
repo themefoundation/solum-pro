@@ -1,0 +1,12 @@
+{
+	"name": "solum",
+	"version": "0.0.1",
+	"devDependencies": {
+		"grunt": "~0.4.1",
+		"matchdep": "~0.1.2",
+		"grunt-contrib-concat": "~0.1.2",
+		"grunt-contrib-watch": "~0.6.1",
+		"grunt-sass": "~0.8.0",
+		"grunt-bowercopy": "1.0.0"
+	}
+}

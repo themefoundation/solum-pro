@@ -1,0 +1,6 @@
+{
+	"name": "solum-pro",
+	"dependencies": {
+		"foundation": "zurb/bower-foundation"
+	}
+}
