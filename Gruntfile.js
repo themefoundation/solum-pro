@@ -24,11 +24,11 @@ module.exports = function( grunt ) {
 				includePaths: ['bower_components/foundation/scss']
 			},
 			dist: {
-				// options: {
-				// 	outputStyle: 'compressed'
-				// },
+				options: {
+					outputStyle: 'compressed'
+				},
 				files: {
-					'assets/css/style.css': 'assets/scss/app.scss'
+					'assets/css/style.css': 'assets/scss/foundation.scss'
 				}
 			}
 		},
@@ -52,7 +52,9 @@ module.exports = function( grunt ) {
 					'js': 'foundation/js/*',
 					// 'js/foundation.min.js': 'foundation/js/foundation.min.js',
 					// 'js/modernizr.js': 'modernizr/modernizr.js',
-					// 'scss/_settings.scss': 'foundation/scss/foundation/_settings.scss'
+					'scss/foundation/_functions.scss': 'foundation/scss/foundation/_functions.scss',
+					'scss/_settings.scss': 'foundation/scss/foundation/_settings.scss',
+					'scss/foundation.scss': 'foundation/scss/foundation.scss',
 					'css': 'foundation/css/*'
 				}
 			}
