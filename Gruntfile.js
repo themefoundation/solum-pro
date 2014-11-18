@@ -19,13 +19,19 @@ module.exports = function( grunt ) {
 		// 	}
 		// },
 
-  sass: {
-    dist: {
-      files: {
-        'assets/css/style.css': 'assets/scss/foundation.scss'
-      }
-    }
-  },
+		sass: {
+			options: {
+				includePaths: ['bower_components/foundation/scss']
+			},
+			dist: {
+				// options: {
+				// 	outputStyle: 'compressed'
+				// },
+				files: {
+					'assets/css/style.css': 'assets/scss/app.scss'
+				}
+			}
+		},
 
 		watch: {
 			// grunt: { files: ['Gruntfile.js'] },
@@ -47,8 +53,7 @@ module.exports = function( grunt ) {
 					// 'js/foundation.min.js': 'foundation/js/foundation.min.js',
 					// 'js/modernizr.js': 'modernizr/modernizr.js',
 					// 'scss/_settings.scss': 'foundation/scss/foundation/_settings.scss'
-					'css': 'foundation/css/*',
-					'scss': 'foundation/scss/*'
+					'css': 'foundation/css/*'
 				}
 			}
 		}
