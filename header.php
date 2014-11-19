@@ -24,7 +24,7 @@
 		<?php tha_header_before(); ?>
 
 		<div id="header" class="site-header">
-			<div class="wrap">
+			<div class="row">
 				<?php tha_header_top(); ?>
 
 				<div id="branding" role="banner">
@@ -38,4 +38,4 @@
 		<?php tha_header_after(); ?>
 
 		<div id="main">
-			<div class="wrap">
+			<div class="row">

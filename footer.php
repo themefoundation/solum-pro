@@ -12,7 +12,7 @@
 
 		<?php tha_footer_before(); ?>
 			<div id="footer" class="site-footer" role="contentinfo">
-				<div class="wrap">
+				<div class="row">
 					<?php tha_footer_top(); ?>
 
 					<?php echo apply_filters( 'site_credits', '<p class="site-credits">&copy;  <a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo('name') . '</a></p>' ); ?>
