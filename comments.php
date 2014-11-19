@@ -23,7 +23,7 @@ if ( post_password_required() ) {
 						'One Comment',
 						'%1$s Comments',
 						get_comments_number(),
-						'drft-textdomain' ),
+						'thmfdn' ),
 						number_format_i18n( get_comments_number()
 					),
 					'<span>' . get_the_title() . '</span>'
@@ -41,7 +41,7 @@ if ( post_password_required() ) {
 
 	<?php if ( !comments_open() && get_comments_number() ) { ?>
 		<p class="no-comments">
-			<?php _e( 'Comments are closed', 'drft-textdomain' ); ?>
+			<?php _e( 'Comments are closed', 'thmfdn' ); ?>
 		</p>
 	<?php } ?>
 
