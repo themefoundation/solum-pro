@@ -2,3 +2,5 @@
 /node_modules/*
 /assets/css/*
 /assets/js/*
+/assets/scss/_settings.scss
+/assets/scss/foundation/
