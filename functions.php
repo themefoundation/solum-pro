@@ -28,6 +28,9 @@ function thmfdn_init() {
 	// Loads stylesheet for the post editor.
 	add_editor_style( 'css/editor-style.css' );
 
+	// Adds default navigation menus
+	register_nav_menu( 'header-menu', __( 'Header Menu', 'rampart' ) );
+
 }
 add_action( 'init', 'thmfdn_init' );
 

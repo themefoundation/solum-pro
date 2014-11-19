@@ -23,18 +23,32 @@
 	<div id="page">
 		<?php tha_header_before(); ?>
 
-		<div id="header" class="site-header">
-			<div class="row">
-				<?php tha_header_top(); ?>
+		<nav class="top-bar" data-topbar role="navigation">
+			<?php tha_header_top(); ?>
+			<ul class="title-area">
+			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+				<li class="name"><?php echo apply_filters( 'site_name', '<h1 class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo('name') . '</a></h1>' ); ?></li>
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			</ul>
 
-				<div id="branding" role="banner">
-					<?php echo apply_filters( 'site_name', '<p class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo('name') . '</a></p>' ); ?>
-					<?php echo apply_filters( 'site_description', '<p class="site-description">' . get_bloginfo( 'description' ) . '</p>' ); ?>
-				</div><!--#branding-->
+			<section class="top-bar-section">
+				<!-- Right Nav Section -->
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'header-menu',
+						'fallback_cb' => false,
+						'menu_class' => 'right'
+					) );
+				?>
 
-				<?php tha_header_bottom(); ?>
-			</div><!--.wrap-->
-		</div><!--#header-->
+				<!-- Left Nav Section -->
+				<ul class="left">
+					<li class="site-description"><?php echo apply_filters( 'site_description', '<a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo( 'description' ) ) . '<a>'; ?></li>
+				</ul>
+			</section>
+			<?php tha_header_bottom(); ?>
+		</nav>
+
 		<?php tha_header_after(); ?>
 
 		<div id="main">
