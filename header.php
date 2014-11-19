@@ -26,8 +26,8 @@
 		<nav class="top-bar" data-topbar role="navigation">
 			<?php tha_header_top(); ?>
 			<ul class="title-area">
-			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 				<li class="name"><?php echo apply_filters( 'site_name', '<h1 class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo('name') . '</a></h1>' ); ?></li>
+				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 			</ul>
 

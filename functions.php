@@ -57,12 +57,26 @@ function thmfdn_enqueue() {
 	wp_enqueue_style( 'thmfdn_stylesheet', get_stylesheet_uri() );
 	wp_enqueue_style( 'thmfdn_real_stylesheet', get_stylesheet_directory_uri() . '/assets/css/style.css' );
 
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'thmfdn_foundation', get_stylesheet_directory_uri() . '/assets/js/foundation.js' );
+	wp_enqueue_script( 'thmfdn_foundation_topbar', get_stylesheet_directory_uri() . '/assets/js/foundation/foundation.topbar.js' );
+
 	if ( is_singular() && comments_open() ) {
 		wp_enqueue_script( 'thmfdn_comment_reply', 'comment-reply' );
 	}
 
 }
 add_filter( 'wp_enqueue_scripts', 'thmfdn_enqueue' );
+
+/**
+ * Set up the topbar navigation
+ *
+ * @since			1.0
+ */
+function thmfdn_topbar() {
+	echo '<script>jQuery(document).foundation();</script>';
+}
+add_filter( 'wp_footer', 'thmfdn_topbar' );
 
 
 /**
