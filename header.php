@@ -23,31 +23,44 @@
 	<div id="page">
 		<?php tha_header_before(); ?>
 
-		<nav class="top-bar" data-topbar role="navigation">
-			<?php tha_header_top(); ?>
-			<ul class="title-area">
-				<li class="name"><?php echo apply_filters( 'site_name', '<h1 class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo('name') . '</a></h1>' ); ?></li>
-				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-			</ul>
+		<?php
 
-			<section class="top-bar-section">
-				<!-- Right Nav Section -->
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'header-menu',
-						'fallback_cb' => false,
-						'menu_class' => 'right'
-					) );
-				?>
+			if ( !function_exists( 'thmfdn_header' ) ) {
+				function thmfdn_header() {
+					?>
 
-				<!-- Left Nav Section -->
-				<ul class="left">
-					<li class="site-description"><?php echo apply_filters( 'site_description', '<a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo( 'description' ) ) . '<a>'; ?></li>
-				</ul>
-			</section>
-			<?php tha_header_bottom(); ?>
-		</nav>
+					<nav class="top-bar" data-topbar role="navigation">
+						<?php tha_header_top(); ?>
+						<ul class="title-area">
+							<li class="name"><?php echo apply_filters( 'site_name', '<h1 class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo('name') . '</a></h1>' ); ?></li>
+							<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+							<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+						</ul>
+
+						<section class="top-bar-section">
+							<!-- Right Nav Section -->
+							<?php
+								wp_nav_menu( array(
+									'theme_location' => 'header-menu',
+									'fallback_cb' => false,
+									'menu_class' => 'right'
+								) );
+							?>
+
+							<!-- Left Nav Section -->
+							<ul class="left">
+								<li class="site-description"><?php echo apply_filters( 'site_description', '<a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo( 'description' ) ) . '<a>'; ?></li>
+							</ul>
+						</section>
+						<?php tha_header_bottom(); ?>
+					</nav>
+
+					<?php
+				}
+				add_action( 'tha_header_after', 'thmfdn_header', 1 );
+			}
+
+		?>
 
 		<?php tha_header_after(); ?>
 

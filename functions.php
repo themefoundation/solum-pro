@@ -10,6 +10,22 @@
  */
 
 /**
+ * Uncomment to disable various theme features.
+ *
+ * Not sure yet if this is a good way to enable/disable features or not.
+ * It at least allows features to be defined in their natuaral contenxt,
+ * ie: header function can be defined in the header.php file instead of
+ * in the functions.php file or somewhere else. The function in the
+ * header.php file checks for the existance of anther function with the
+ * same name before running. Thus, defining a function with the same
+ * name (example below) keeps the original function from running.
+ *
+ * @since			1.0
+ */
+// function thmfdn_header() {}
+
+
+/**
  * Runs initialization routine
  *
  * @since			1.0
