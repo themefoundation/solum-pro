@@ -21,8 +21,8 @@
 
 <body <?php body_class(); ?>>
 	<div id="page">
-		<?php tha_header_before(); ?>
 
+		<?php tha_header_before(); ?>
 		<?php
 
 			if ( !function_exists( 'thmfdn_header' ) ) {
@@ -57,12 +57,9 @@
 
 					<?php
 				}
-				add_action( 'tha_header_after', 'thmfdn_header', 1 );
 			}
 
+			thmfdn_header();
+
 		?>
-
 		<?php tha_header_after(); ?>
-
-		<div id="main">
-			<div class="row">
