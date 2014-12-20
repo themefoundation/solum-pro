@@ -53,3 +53,9 @@
 // #secondary {
 // 	@include grid-column(4);
 // }
+
+.top-bar .site-description {
+	background: $topbar-bg-color;
+	line-height: 45px;
+	font-size: 0.8125rem;
+}

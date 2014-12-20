@@ -48,9 +48,8 @@
 							?>
 
 							<!-- Left Nav Section -->
-							<ul class="left">
-								<li class="site-description"><?php echo apply_filters( 'site_description', '<a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo( 'description' ) ) . '</a>'; ?></li>
-							</ul>
+							<?php echo apply_filters( 'site_description', '<ul class="left"><li class="site-description">' . get_bloginfo( 'description' ) ) . '</li></ul>'; ?>
+
 						</section>
 						<?php tha_header_bottom(); ?>
 					</nav>
